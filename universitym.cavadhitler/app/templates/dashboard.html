@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}İdarəetmə paneli{% endblock %}
+{% block page %}dashboard{% endblock %}
+{% block content %}
+<h1>İdarəetmə paneli</h1>
+<div id="tiles" class="tiles"></div>
+<div class="two-col">
+  <section class="card"><h2>Ən çox qeydiyyat olan tədbirlər</h2><div id="topEvents"></div></section>
+  <section class="card"><h2>Kateqoriyalar üzrə təhlil</h2><div id="byCategory"></div></section>
+</div>
+{% endblock %}

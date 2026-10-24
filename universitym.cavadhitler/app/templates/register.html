@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Qeydiyyat{% endblock %}
+{% block page %}register{% endblock %}
+{% block content %}
+<form id="registerForm" class="card form narrow" novalidate>
+  <h1>Qeydiyyat</h1>
+  <label>Ad və soyad <input type="text" name="full_name" required></label>
+  <label>E-poçt <input type="email" name="email" required></label>
+  <label>Parol (ən azı 6 simvol) <input type="password" name="password" required></label>
+  <div class="form-error" id="formError"></div>
+  <button class="btn primary" type="submit">Qeydiyyatdan keç</button>
+  <p>Artıq hesabınız var? <a href="/login">Giriş</a></p>
+</form>
+{% endblock %}

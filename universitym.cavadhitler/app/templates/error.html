@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Xəta {{ code }}{% endblock %}
+{% block page %}error{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Xəta {{ code }}</h1>
+  <p>{{ message }}</p>
+  <a class="btn primary" href="/">Ana səhifə</a>
+</div>
+{% endblock %}

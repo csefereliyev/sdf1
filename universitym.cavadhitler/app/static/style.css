@@ -1,0 +1,60 @@
+:root {
+  --bg: #f4f6fa; --card: #fff; --text: #1f2937; --muted: #6b7280;
+  --primary: #2457c5; --primary-dark: #1a3f91; --danger: #c0392b;
+  --ok: #1e8e5a; --warn: #b7791f; --border: #e2e6ee;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+       background: var(--bg); color: var(--text); line-height: 1.5; }
+a { color: var(--primary); }
+.topbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+          gap: 8px; padding: 12px 24px; background: var(--primary); color: #fff; }
+.topbar a { color: #fff; text-decoration: none; }
+.brand { font-weight: 700; font-size: 1.15rem; }
+#nav { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+#nav button { background: transparent; border: 1px solid #fff; color: #fff; padding: 4px 10px;
+              border-radius: 6px; cursor: pointer; }
+.container { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+.page-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+        padding: 16px; margin-bottom: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.filters label { font-size: .85rem; color: var(--muted); display: flex; gap: 4px; align-items: center; }
+input, select, textarea { padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px;
+                          font: inherit; background: #fff; }
+.form { display: flex; flex-direction: column; gap: 12px; }
+.form label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; font-size: .9rem; }
+.form.narrow { max-width: 420px; margin: 0 auto; }
+.row { display: flex; gap: 12px; flex-wrap: wrap; }
+.row > label { flex: 1; }
+.btn { display: inline-block; padding: 8px 14px; border: 1px solid var(--border); border-radius: 6px;
+       background: #fff; color: var(--text); text-decoration: none; cursor: pointer; font: inherit; }
+.btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.btn.primary:hover { background: var(--primary-dark); }
+.btn.danger { color: var(--danger); border-color: var(--danger); }
+.btn:disabled { opacity: .55; cursor: not-allowed; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .75rem;
+         font-weight: 600; background: #e8eefc; color: var(--primary); }
+.badge.past { background: #eee; color: var(--muted); }
+.badge.upcoming { background: #e3f6ec; color: var(--ok); }
+.badge.full { background: #fdecea; color: var(--danger); }
+.event-card h3 { margin: 8px 0 4px; }
+.meta { color: var(--muted); font-size: .9rem; margin: 2px 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.bar { background: #e9edf5; border-radius: 6px; height: 8px; overflow: hidden; margin: 8px 0 2px; }
+.bar > span { display: block; height: 100%; background: var(--primary); }
+.empty { text-align: center; color: var(--muted); padding: 40px 0; grid-column: 1 / -1; }
+.form-error, .field-error { color: var(--danger); font-size: .85rem; font-weight: 400; }
+.toast { position: fixed; right: 16px; top: 16px; padding: 10px 16px; border-radius: 8px;
+         background: var(--ok); color: #fff; z-index: 10; max-width: 340px; }
+.toast.error { background: var(--danger); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
+         margin-bottom: 16px; }
+.tile { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.tile .num { font-size: 2rem; font-weight: 700; color: var(--primary); }
+.two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--border); }
+.stat-row { margin-bottom: 12px; }
+.stat-row .label { display: flex; justify-content: space-between; font-size: .9rem; }

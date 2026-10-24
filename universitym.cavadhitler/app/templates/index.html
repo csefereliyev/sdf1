@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block page %}index{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Tədbirlər</h1>
+  <a id="newEventBtn" class="btn primary" href="/events/new" hidden>+ Yeni tədbir</a>
+</div>
+
+<form id="filterForm" class="filters card">
+  <input type="search" name="q" placeholder="Ada görə axtar…">
+  <select name="category_id"><option value="">Bütün kateqoriyalar</option></select>
+  <input type="text" name="location" placeholder="Yer">
+  <label>Başlanğıc <input type="date" name="date_from"></label>
+  <label>Son <input type="date" name="date_to"></label>
+  <select name="status">
+    <option value="">Hamısı</option>
+    <option value="upcoming">Gələcək</option>
+    <option value="past">Keçmiş</option>
+  </select>
+  <button class="btn" type="reset">Təmizlə</button>
+</form>
+
+<div id="events" class="grid"></div>
+{% endblock %}

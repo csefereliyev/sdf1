@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Tədbir{% endblock %}
+{% block page %}event_detail{% endblock %}
+{% block content %}
+<div id="eventDetail" data-event-id="{{ event_id }}" class="card"></div>
+<section id="participantsSection" class="card" hidden>
+  <div class="page-head">
+    <h2>İştirakçılar</h2>
+    <a id="exportBtn" class="btn" href="#">CSV ixrac</a>
+  </div>
+  <div id="participants"></div>
+</section>
+{% endblock %}

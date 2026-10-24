@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Universitet Tədbirləri{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body data-page="{% block page %}{% endblock %}">
+  <header class="topbar">
+    <a class="brand" href="/">🎓 Universitet Tədbirləri</a>
+    <nav id="nav"></nav>
+  </header>
+  <main class="container">
+    <div id="toast" class="toast" hidden></div>
+    {% block content %}{% endblock %}
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

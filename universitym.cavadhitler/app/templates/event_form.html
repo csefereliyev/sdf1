@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Tədbir{% endblock %}
+{% block page %}event_form{% endblock %}
+{% block content %}
+<form id="eventForm" class="card form" data-event-id="{{ event_id or '' }}" novalidate>
+  <h1>{{ 'Tədbiri redaktə et' if event_id else 'Yeni tədbir' }}</h1>
+  <label>Ad <input type="text" name="title" required maxlength="200"></label>
+  <label>Təsvir <textarea name="description" rows="4"></textarea></label>
+  <label>Kateqoriya
+    <select name="category_id" required><option value="">Seçin…</option></select>
+  </label>
+  <div class="row">
+    <label>Tarix <input type="date" name="event_date" required></label>
+    <label>Saat <input type="time" name="event_time" required></label>
+  </div>
+  <label>Keçirilmə yeri <input type="text" name="location" required></label>
+  <label>Maksimum iştirakçı sayı <input type="number" name="max_participants" min="1" required></label>
+  <div class="form-error" id="formError"></div>
+  <div class="row">
+    <button class="btn primary" type="submit">Yadda saxla</button>
+    <a class="btn" href="/">Ləğv et</a>
+  </div>
+</form>
+{% endblock %}
